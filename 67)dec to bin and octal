@@ -1,0 +1,29 @@
+import java.util.*;
+class Dectobinoct
+{
+public static void main(String arg[])
+{
+int n,rem,dec=0,i=1,rem1,oct=0,j=1;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter decimal num:");
+n=sc.nextInt();
+int m=n;
+while(n!=0)
+{
+rem=n%2;
+dec=dec+i*rem;
+n=n/2;
+i=i*10;
+}
+while(m!=0)
+{
+rem1=m%8;
+oct=oct+j*rem1;
+m=m/8;
+j=j*10;
+}
+System.out.println("dec to bin:"+dec);
+System.out.println("dec to oct:"+oct);
+}
+}
+
