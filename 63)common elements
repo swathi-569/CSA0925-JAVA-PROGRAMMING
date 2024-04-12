@@ -1,0 +1,30 @@
+import java.util.*;
+class Common {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 2, 3, 4};
+        int[] arr2 = {2, 4, 5, 6, 7};
+
+        List<Integer> commonElements = findCommonElements(arr1, arr2);
+
+        System.out.println("Common elements: " + commonElements);
+    }
+
+    public static List<Integer> findCommonElements(int[] arr1, int[] arr2) {
+        Set<Integer> set = new HashSet<>();
+        List<Integer> commonElements = new ArrayList<>();
+
+        // Add elements from first array to set
+        for (int num : arr1) {
+            set.add(num);
+        }
+
+        // Check elements of second array against the set
+        for (int num : arr2) {
+            if (set.contains(num)) {
+                commonElements.add(num);
+            }
+        }
+
+        return commonElements;
+    }
+}
