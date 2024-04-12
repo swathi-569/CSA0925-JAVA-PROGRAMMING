@@ -1,0 +1,21 @@
+import java.util.*;
+class Sumsquare
+{
+public static void main(String arg[])
+{
+Scanner sc=new Scanner(System.in);
+int a,b,i;
+double s;
+System.out.println("enter number:");
+a=sc.nextInt();
+System.out.println("enter 2nd num:");
+b=sc.nextInt();
+for(i=a;i<b;i++)
+{
+s=Math.pow(i,2);
+}
+System.out.println("squares:"+s);
+}
+}
+
+
