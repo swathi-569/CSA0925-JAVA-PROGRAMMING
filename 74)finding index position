@@ -1,0 +1,32 @@
+import java.util.*;
+class Index
+{
+public static void main(String arg[])
+{
+String str;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the string:");
+str=sc.nextLine();
+char ch;
+System.out.println("enter the char:");
+ch=sc.next().charAt(0);
+int n,i,index=-1;
+n=str.length();
+for(i=0;i<n;i++)
+{
+if(str.charAt(i)==ch)
+{
+index=i;
+break;
+}
+}
+if(index!=-1)
+{
+System.out.println("index found at position:"+index);
+}
+else
+{
+System.out.println("index not found:"+index);
+}
+}
+}
