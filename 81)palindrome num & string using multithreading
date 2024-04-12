@@ -1,0 +1,58 @@
+import java.util.*;
+class athread extends Thread
+{
+public void run()
+{
+String str="madam";
+char ch;
+String rev="";
+int n=str.length();
+int i;
+for(i=n-1;i>=0;i--)
+{
+ch=str.charAt(i);
+rev=rev+ch;
+}
+if(str.equals(rev))
+{
+System.out.println("palindrome:"+rev);
+}
+else
+{
+System.out.println("not palindrome:"+rev);
+}
+}
+}
+class bthread extends Thread
+{
+public void run()
+{
+int n=121,rev=0,rem,sum=0;
+int temp=n;
+while(n!=0)
+{
+rem=n%10;
+rev=rev*10+rem;
+n=n/10;
+}
+sum=temp+rev;
+if(temp==rev)
+{
+System.out.println(sum+" is palindrome");
+}
+else
+{
+System.out.println("not palindrome");
+}
+}
+}
+class Multhread
+{
+public static void main(String arg[])
+{
+athread s=new athread();
+bthread s1=new bthread();
+s.start();
+s1.start();
+}
+}
