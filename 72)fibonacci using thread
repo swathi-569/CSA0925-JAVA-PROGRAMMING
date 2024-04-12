@@ -1,0 +1,25 @@
+class athread extends Thread
+{
+public void run()
+{
+int n=5,n1=0,n2=1,n3,i;
+System.out.println(+n1);
+System.out.println(+n2);
+for(i=2;i<5;i++)
+{
+n3=n1+n2;
+n1=n2;
+n2=n3;
+System.out.println(+n3);
+}
+}
+}
+class Fabonaccithread
+{
+public static void main(String arg[])
+{
+athread s=new athread();
+s.start();
+}
+}
+
