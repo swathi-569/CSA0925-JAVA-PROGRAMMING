@@ -1,0 +1,47 @@
+import java.util.*;
+class Electricity
+{
+Scanner sc=new Scanner(System.in);
+int conno,bill;
+double preread,curread;
+String str;
+void get()
+{
+double unit=curread-preread;
+if(unit>100)
+{
+System.out.println("1rs per unit");
+}
+else if(unit>=101 && unit<=200)
+{
+System.out.println("2.5rs per unit");
+}
+else if(unit>=201 && unit<=500)
+{
+System.out.println("4rs per unit");
+}
+else 
+{
+System.out.println("6rs per unit");
+}
+}
+void display()
+{
+System.out.println("enter con number:");
+conno=sc.nextInt();
+System.out.println("enter preread number:");
+preread=sc.nextInt();
+System.out.println("enter curread number:");
+curread=sc.nextInt();
+System.out.println("enter bill:");
+bill=sc.nextInt();
+System.out.println("enter consumer name:");
+String str=sc.nextLine();
+}
+public static void main(String args[])
+{
+Electricity e=new Electricity();
+e.display();
+e.get();
+}
+}
